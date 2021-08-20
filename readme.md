@@ -13,13 +13,14 @@ The assignment of the subcellular location was performed combining the output of
 ## Genomic, proteomic, and composition features
 Considering the vast amount of information encoded in the genome sequence of *Toxoplasma gondii*, we think we could apply clustering and classification methods to infer the subcellular localization of such proteins using genomic, proteomic and composition features like %G+C, codon bias, presence of transmembrane helices, disordered regions, etc.
 
-## Genome and protein sequences
+## Genome and protein sequences, data availability
 All sequences employed in this notebook were downloaded from [ToxoDB](https://toxodb.org), we only kept proteins encoded in chromosome-level resolved sequences (n=8200). We then calculated %G+C and codon usage from the coding sequences; and physicochemical properties of the proteins using [EMBOSS](http://emboss.sourceforge.net/). Transmembrane helices were predicted using [tmhmm](http://www.cbs.dtu.dk/services/TMHMM/). Disordered regions and other conserved domains were predicted using [InterProScan](https://www.ebi.ac.uk/interpro/search/sequence/). All the predictions and experimental results were combined into a [tsv file](Toxoplasma_gondii_ME49.tsv) for further processing using pandas and scikit learn
 
 - [Genome sequence](Toxoplasma_gondii_ME49.fasta.gz)
 - [Gene sequences](Toxoplasma_gondii_ME49.ffn.gz)
 - [Protein sequences](Toxoplasma_gondii_ME49.faa.gz)
 - [Final dataset](Toxoplasma_gondii_ME49.tsv.gz)
+- [Jupyter notebook](Logistic Regression Models on Spatial Proteomics Data.ipynb)
 
 ## Data structure
 
@@ -129,9 +130,9 @@ plt.close()
 
 ## Finding #1
 ### There are differences in codon usage among exclusive and shared genes
-|Shared genes                     |Exclusive genes                     |
-|---------------------------------|------------------------------------|
-|![shared]("orthology/shared.svg")|![shared]("orthology/exclusive.svg")|
+|Shared genes                   |Exclusive genes                   |
+|-------------------------------|----------------------------------|
+|![shared](orthology/shared.svg)|![shared](orthology/exclusive.svg)|
 
 ## Logistic model #1:
 - We selected only the aminoacids with different codon usage patterns (Cys, Glu, Phe, His, Lys, Asn, Gln and Tyr) as potential predictors
