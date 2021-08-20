@@ -20,7 +20,7 @@ All sequences employed in this notebook were downloaded from [ToxoDB](https://to
 - [Gene sequences](Toxoplasma_gondii_ME49.ffn.gz)
 - [Protein sequences](Toxoplasma_gondii_ME49.faa.gz)
 - [Final dataset](Toxoplasma_gondii_ME49.tsv.gz)
-- [Jupyter notebook](Logistic Regression Models on Spatial Proteomics Data.ipynb)
+- [Jupyter notebook](Logistic_Regression_Models_on_Spatial_Proteomics_Data.ipynb)
 
 ## Data structure
 
